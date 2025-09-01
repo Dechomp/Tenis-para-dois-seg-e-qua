@@ -1,6 +1,8 @@
 moviX = random_range(-1, 1)
 moviY = random_range(-1, 1)
 
+velocidade = 1
+
 if moviX > 0{
 	moviX = 1
 }
