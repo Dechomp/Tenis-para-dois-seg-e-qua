@@ -15,10 +15,10 @@
 		moviY *= -1
 	}
 	//Colisao com o player
-	colisaoVerticalCima =   place_meeting(x, y  -10 , objPlayer1) or place_meeting(x, y  - 10 , objPlayer2)
-	colisaoVerticalBaixo = place_meeting(x, y  +10 , objPlayer1) or place_meeting(x, y  + 10 , objPlayer2)
+	colisaoVerticalCima =   place_meeting(x, y  -10 , objPlayer1) or place_meeting(x, y  - 10 , objPlayer2) or place_meeting(x, y  - 10 , objCPU)
+	colisaoVerticalBaixo = place_meeting(x, y  +10 , objPlayer1) or place_meeting(x, y  + 10 , objPlayer2) or place_meeting(x, y  + 10 , objCPU)
 	colisaoHorizontalP1 = place_meeting(x - 10, y, objPlayer1) 
-	colisaoHorizontalP2 = place_meeting(x + 10, y, objPlayer2)
+	colisaoHorizontalP2 = place_meeting(x + 10, y, objPlayer2) or place_meeting(x + 10, y, objCPU)
 	
 	if colisaoHorizontalP1{
 		moviX = 1
